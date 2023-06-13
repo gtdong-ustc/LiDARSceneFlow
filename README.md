@@ -1,4 +1,4 @@
-# PointPWC
+
 This is the code for "Exploiting Rigidity Constraints for LiDAR Scene Flow Estimation".
 
 ## Prerequisities
