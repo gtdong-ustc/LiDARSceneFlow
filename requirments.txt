@@ -1,0 +1,9 @@
+scipy
+tqdm
+sklearn
+numba
+cffi
+pypng
+pptk
+pytorch_lightning
+

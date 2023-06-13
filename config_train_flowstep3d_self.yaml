@@ -1,0 +1,64 @@
+gpu: "0"
+multi_gpu: null
+
+model_name: FlowStep3D
+
+full: True
+
+arch: PointConv
+last_relu: False
+allow_less_points: False
+
+# general args
+batch_size: 2
+epochs: 800
+learning_rate: 0.001
+allow_augmentation: False
+sample_mode: FPS
+
+optimizer: Adam
+pretrain: /model/1015323606/weekly_supervised_rigid_scene_flow/pretrain/FlowStep3D/checkpoints/flowstep3d_sv/2020-10-19_13-17/epoch=33.ckpt
+continue_pretrain: False
+
+
+weight_decay: 0.0001
+
+dim: 3
+num_points: 8192
+
+DEVICE: cuda
+
+evaluate: False
+
+dataset: LidarKITTI
+#dataset: WaymoOpen
+data_root: /data/1015323606/Weekly_Supervised_Scene_Flow
+data_process:
+  DEPTH_THRESHOLD: 35.
+  NO_CORR: True
+
+# data augmentation
+aug_together:
+  degree_range: 0.1745329252
+  shift_range: 1.
+  scale_low: 0.95
+  scale_high: 1.05
+  jitter_sigma: 0.01
+  jitter_clip: 0.00
+
+aug_pc2:
+  degree_range: 0.
+  shift_range: 0.3
+  jitter_sigma: 0.01
+  jitter_clip: 0.00
+
+# miscalleneous
+workers: 16
+
+
+
+
+
+
+
+
