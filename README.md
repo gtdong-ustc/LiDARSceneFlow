@@ -1,4 +1,3 @@
-
 This is the code for "Exploiting Rigidity Constraints for LiDAR Scene Flow Estimation".
 
 ## Prerequisities
@@ -25,16 +24,8 @@ cd ../
 ### Train
 Set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section. Then run
 ```bash
-python3 train.py config_train.yaml
+python train.py config_train.yaml
 ```
-
-### Evaluate
-Set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section. Then run
-```bash
-python3 evaluate.py config_evaluate.yaml
-```
-
-We upload one pretrained model in ```pretrain_weights```.
 
 ## Citation
 
